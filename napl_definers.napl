@@ -1,0 +1,28 @@
+2 [
+	`{' [ [ 1 ~ setLevel ] sss1 ~ .{ ] ss1 setLevel is
+	`}' [ sss1 ~ .} ] ss1 setLevel is  
+] drop drop
+
+3 [
+	`{{' [ [ 1 ~ setLevel ] sss1 ~ .{ ] ss1 setLevel is
+	`}}' [ sss1 ~ .} ] ss1 setLevel is  
+] drop drop
+
+4 [
+	`{{{' [ [ 1 ~ setLevel ] sss1 ~ .{ ] ss1 setLevel is
+	`}}}' [ sss1 ~ .} ] ss1 setLevel is  
+] drop drop 
+
+2 [ 
+`:{' [ [ 1 ~ setLevel ~ is ] sss1 ~ .{ ] ss1 setLevel is
+] drop drop
+
+
+`for'    :{ for? drop }
+`times'  :{ times? drop }
+
+`|' {{ } { }} 2 setLevel is 
+
+`if{' {{ ~ if 2 .{ }} 2 setLevel is
+
+

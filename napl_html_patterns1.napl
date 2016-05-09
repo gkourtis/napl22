@@ -1,0 +1,136 @@
+`quote' :any{ \' \" }
+
+`quotedText' :{ 
+	space1+ mark quote mark noMatchLastMark0++ matchLastMark unmark 	
+}
+
+`publicId' :{
+	space1+ ~ “PUBLIC” matchI 
+	~ quotedText match1+
+}
+
+`docType' :{
+	~ “<!DOCTYPE” matchI 
+	space1++
+	~ “HTML” matchI
+	
+	space1++ ~ “PUBLIC” matchI 
+	space1++ mark quote mark anything matchLastMark unmark 	
+
+	~ publicId match01
+	space0++ 
+	“>”
+	space0++ 
+}
+
+`voidElement' :any{ 
+	“area” “base” “br” “col” “command” ”embed” 
+	“hr” “img” “input” “keygen” “link” “meta” 
+	“param” “source” “track” “wbr” 
+} 
+
+`attributeName' :{ ~ attributeChar match1++ }
+
+`unquotedValueLetter' { \" \' \= \> \< \` } ~ space @+ none is
+
+`value' 				:{ ~ unquotedValueLetter match0++ }
+`unquotedValue' :{ ~ unquotedValueLetter match1++ }
+
+`quotedValue' :{ mark quote mark value matchLastMark unmark }
+
+« bellow are definitions done using 
+	https://www.w3.org/TR/html-markup/syntax.html#legacy-tool-compatible-doctype
+»
+
+`space' :any{ 9 10 12 13 32 }
+
+`space0+' :{ ~ space match0+ }
+`space1+' :{ ~ space match1+ }
+
+`space0++' :{ ~ space match0++ }
+`space1++' :{ ~ space match1++ }
+
+`unquotedAttribute' :{ space1++ attributeName space0++ “=” space0++ unquotedValue }
+
+`quotedAttribute' :{ space1++ attributeName space0+ “=” space0++ quotedValue }
+
+`attribute' :any{ unquotedAttribute quotedAttribute }
+
+`voidTag' :{ “<” voidElement \/ match01 “>” }
+
+`comment' :{ “<!--” anything “-->” }
+
+`startTag' :{
+	“<”
+	mark name mark space1++
+	~ attribute match0++ 
+	space0++
+	“>”
+}
+
+`endTag' :{ “</” matchLastMark space0++ “>” }
+
+`startEndTag' :{
+	startTag
+	endTag
+}
+
+`normalTag' :{
+	“<” mark name mark 
+		~ attribute match0+ 
+		space0+ 
+	“>”
+	~ endTag noMatch++
+	endTag unmark
+}
+
+`voidTag' :{
+	“<”
+	voidElement
+	~ attribute match0+
+ 
+	space0++
+	~ “/”	match01 “>”
+}
+
+`anyTag' :any{ normalTag voidTag }
+
+
+`newLine' :any{ 10 13 }
+
+`lineOfCharsByEntity' :{
+	space0++ ~ name match01 space0++ “,” 
+	space0++ ~ name match01 space0++ “,” 
+	space0++ { space0++ \, noMatch0++ “,” } match1+
+	space0++ normalTag space0++ “,”
+	space0++ \, noMatch0++ “,” space0++ ~ newLine match1+
+}
+
+
+`.matched' :{ « s positions p »
+	[ ss2 { dup ss1 at swap ss1 1 int+ at ss3 3 roll> slice } foreach ] nip nip nip 
+}	
+
+
+`test2' :{
+	`/home/gk/html/Characters Ordered by Entity Name.html' file2String
+	matchStart 
+	~ “<pre>” noMatch0++ “<pre>”  
+	mark 
+		~ “</pre>” noMatch0++ 
+	mark
+	“</pre>”
+	~3 .matched 
+	
+	0 at 
+	
+	matchStart 
+	~ lineOfCharsByEntity debug
+
+	
+}
+
+`reinclude' :{
+	`napl_html_patterns1.napl' include
+}
+

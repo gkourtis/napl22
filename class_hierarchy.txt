@@ -1,0 +1,276 @@
+class0
+	classImmediate
+		classPrimitive
+		classInt
+	classOnlyVector
+		classUndefined
+		classDeferred
+	classClassPrototype
+		classFix
+			classAgu
+			classInt
+			classFloat
+			classDouble
+			classInt64
+			classBitString
+		classVar
+			classVarAgu			
+			classAggregate
+				classString
+					classComment
+				classPatternAny
+				classPatternAll			
+				
+
+Indirectly from Aggregate
+
+Obj { execute:Undefined executionLevel:0 }
+	immediateObj 
+		primitiveObj { execute:doIt }
+	varObj { 
+		undefined 
+		deferred { execute:xxx }
+	bodyObj { token: headSize:sizeof(token) elementSize: isvObj: }
+		fixObj { elements: }
+			Int 				{ elementSize:sizeof(Int) 				elements:1 } 
+			Float 			{ elementSize:sizeof(float)			elements:1 }
+			Double 		{ elementSize:sizeof(double)			elements:1 } 
+			Int64				{ elementSize:sizeof(Int64)			elements:1 }
+			BitString	{ elementSize:sizeof(bitString)	elements:1 }
+		varObj { maxElements: elements: }
+			Aggregate
+				String			{ show:xxx }
+					Comment	
+				PatternAny	{ execute:executePAny }
+				PatternAll	{ execute:executePAll }
+			AggregateQ 	{ first: }
+		
+A prototype holds:
+
+a) Values of current level
+b) Fields for values of current level
+c) Fields of previous levels
+By unifying the concept of field and value, and considering the values as fields 
+a level lower than the fields of current level we have that we may write the above as:
+
+a) fields(values) of current level
+b) fields of previous level
+c) fields of previous level than the previous level etc.
+
+As said previously a generic class prototype has:
+
+values for itself 
+Fields for the previous values
+Fields for it's first level descendants
+Fields for it's second level descendants
+Fiedls for it's third level descendants
+etc...
+
+The class itself may inherit from another class, in that case the fields of that class are 
+addeed to the fields of the previous one.
+
+As said there are two levels of inheritance, one in which the descendance order is lowered and one 
+in wich the descendance order isn't.
+
+Let's say and example:
+
+We define a class 
+
+Levelization of values.
+
+In the prototype world, there are:
+
+a) Values
+
+A prototype may derive from another one ( or delegate an anchestor ).
+In that case the values of the ancestor are values of the delegated too.
+In objects besides values we have fields.
+
+The kind of inheritance determines if a value if an anchestor is derived as a value or as a field.
+
+So e.g.: 
+
+object A: { x y z }
+object a: { 1 2 3 }
+
+if we say that object a derives normally from A, than the object a is seen as containing:
+
+a: { x y z 1 2 3 } ( 6 elements )
+
+If instead object a subderives from A, than the object a is seen as containing:
+
+a: { x: y: z: 1 2 3 } the values x y z have been promoted to fields (with the addition of ":" 
+to their end)
+
+So essentially the object a interpreted holds: a: { x:1 y:2 z:3 }
+
+Suppose now that A is a "class" in the sense of C++ that holds the 3 fields "x y z" and 2 static 
+variables called: "s1 s2" with some values associated "10 20".
+
+In order to construct A, we must create at first { s1 s2 } and make it the subderived object.
+
+{ s1 s2 } { 10 20 } subDerived . 
+
+In that case by subderivation we have the object: { s1:10 s2:20 }
+
+To that object we have to add the fields { x y z }.
+
+So we could say: 
+
+{ s1 s2 } { 10 20 x y z } subDerived 
+
+In that case by subderivation we have the object: { s1:10 s2:20 x y z } .
+
+now we can subderive from it { 1 2 3 }.
+
+{ s1:20 s2:20 x y z } { 1 2 3 } subDerived 
+
+But let's see the whole by lines:
+
+[1]
+values: s1 s2 
+fields:
+
+The subderivation moves the values one line bellow so
+
+[2]
+values:
+fields: s1 s2 
+
+By adding derivation 
+
+[3]
+values: 10 20 x y z 
+fields: s1 s2
+
+by adding another subderivation all fields free to go a line down do go. values that do not have 
+space to go down rest at their position.
+
+So by subderiving
+
+[4]
+values: 10 20 
+fields: s1 s2 x y z
+
+[5]
+and adding { 1 2 3 }
+
+[6]
+values: 10 20 1 2 3 
+fields: s1 s2 x y z
+
+Now suppose we want to create the class that will create as an instance object [4]
+
+Wich is that class ?
+
+Could it be:
+
+[7]
+values:
+fields: s1 s2 x y z
+
+The above isn't the ideal one because we want to create the instance via subderivation.
+So should be something like:
+
+[7]
+values: s1 s2
+fields:        x y z
+
+or better:
+
+[8]
+values: s1 s2 x y z
+fields: 
+
+So by subderivation we would have:
+
+[9]
+values: 
+fields: s1 s2 x y z
+
+and by addition of the data:
+
+[10]
+values: 10 20 
+fields: s1 s2 x y z
+
+But then to create the instance of 10 we sould just derive and not subderive. 
+In order to be able to subderive it should be like:
+
+[11]
+values: 10 20 x y z
+fields: s1 s2 
+
+so subderivation would move "x y z" down.
+
+We must take into account that any prototype or class may be seen as a list of 
+
+level:value .
+
+We will call that an levvalue.
+
+When the level is 0 that means a value.
+When a level is 1 that means a field.
+When the level is 2 that means a field for objects suberived from it.
+
+derivation of an object from another object, makes the derived object have all levvalues of 
+the anchestor.
+
+subderivation of an object from another object, makes the derived object have all levvalues of the 
+anchestor but with level increased by 1.
+
+e.g. : when 
+
+a={ 1 2 } derives from { 10 20 } then a={ 10 20 1 2 }
+
+Instead when 
+
+a={ 1 2 } subderives from { 10 20 } then a={10:1 20:2} .
+
+Obviously it is better to explain it with fields:
+
+a={ 1 2 } subderives from { x y } then a={x:1 y:2} 
+
+and if instead 
+
+a={1 2 } derives from { x y } then a={ x y 1 2 }
+
+Via derivation and subderivation we may create an arbitrary object with any kind of levels and fields.
+
+So examining the previous class case we have that we need an object as follows:
+
+in order to show in a simple manner levels we will add after the value the level as a number of colons 
+for a simple value no colon "a" for a level 1 object one colon "a:" for a level 2 object two colons "a::"
+
+So the previous case is described as:
+
+{ s1 s2 x y z } 
+
+So when we have e.g. o={ 10 20 } and we subderive from the above we have that 
+
+o={ s1: s2: x: y: z: 10 20 } and being allowed to collect fields and values together:
+
+o={ s1:10 s2:20 x:: y:: z:: }
+
+///
+
+given that we have 
+
+v={ 1 2 3 } and we want to attach to it field names we have to subderive from:
+
+c1={ x y z } 
+
+but 
+
+
+
+
+
+
+
+		
+
+
+
+
+

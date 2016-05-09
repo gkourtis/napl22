@@ -1,0 +1,136 @@
+`vowel'			~ ¦eyuioaEYUIOA| is
+
+`consonant'	~ ¦qwrtpsdfghjklzxcvbnmQWRTPSDFGHJKLZXCVBNM| is
+
+`digit'			~	¦0123456789| is
+`exp'				~	¦eE| is
+`sign'			~ ¦+-| is
+`sign?'			:{ mark ~ sign match01 mark }
+
+`vc' :any{ vowel consonant } 
+
+`uinteger' 			:{ mark ~ digit match1+ mark } 
+`integer'				:{ sign? uinteger } 
+`decimal'				:{ integer { decimalPoint match uinteger } match01 } 
+
+`floatingPoint' :{ decimal { exp integer } match01 }
+
+`mAnything' :{ mark anything mark }
+
+`matchStart' :{		{ { 0 } } 	} 
+
+`testMarked' :{
+	`belissimo' matchStart “be” mark anything mark “s” mark anything mark “o” 
+	marked
+}
+
+`testMarked1' :{
+	`belissimo' matchStart consonant mAnything consonant mAnything consonant mAnything matchEnd
+	marked
+}
+
+`noMatch' :{
+	over 4 roll>
+	swap 
+	mark markLevelLess
+	swap 
+		match
+	markLevelMore markDrop
+	3 roll<
+	swap
+	@-
+}
+
+`noMatchMark' :{
+	over 4 roll>
+	swap 
+	mark markLevelLess
+	swap 
+		matchMark
+	markLevelMore markDrop
+	3 roll<
+	swap
+	@-
+}
+
+
+`match0++' :{
+	dup 4 roll>
+	match0+
+	3 roll<
+	noMatch
+}
+
+`match1++' :{
+	dup 4 roll>
+	match
+	3 roll<
+	match0++
+}
+
+`matchMark0++' :{
+	dup 4 roll>
+	matchMark0+
+	3 roll<
+	noMatch
+}
+
+
+`noMatch0++' :{ 
+	3 roll> 
+		{	dup 4 roll>
+			3 pick
+			noMatch
+			4 roll<
+			swap 
+			isEmpty ?exit
+			nip
+			advance
+		} loop
+	drop
+	3 roll< drop
+}
+
+`noMatchMark0++' :{ 
+	3 roll> 
+		{	dup 4 roll>
+			3 pick
+			noMatchMark
+			4 roll<
+			swap 
+			isEmpty ?exit
+			nip
+			advance
+		} loop
+	drop
+	3 roll< drop
+}
+
+`noMatchLastMark0++' :{
+	~3 noMatchMark0++
+}
+
+`dok' :{ 7 8 int+ } 
+
+`dokimi' :{
+	2 3 int+ dup int* dok dup int* 
+}
+
+`do1' :{ 
+	10 21 2 { i print } for. `Ended' print 
+}
+
+`do2' :{
+	1047 200 50 { i print i 150 int> 2 ?.exit } for. 
+}
+
+`do' :{
+	`bello"brutto"strano' matchStart 
+	~ alphaChar match0++
+	mark
+	quote
+	mark
+	~ noMatchLastMark0++
+	debug
+}
+

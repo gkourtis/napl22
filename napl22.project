@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeLite_Project Name="napl22" InternalType="Console">
+  <Plugins>
+    <Plugin Name="qmake">
+      <![CDATA[00110001N0005Debug0000000000000001N0007Release0000000000000001N0003m320000000000000001N0008m32clang0000000000000001N0006m32g++0000000000000001N0003m640000000000000001N0008m64clang0000000000000001N0006m64g++0000000000000001N0004mx320000000000000001N0009mx32clang0000000000000001N0007mx32g++000000000000]]>
+    </Plugin>
+    <Plugin Name="CMakePlugin">
+      <![CDATA[[{
+  "name": "Debug",
+  "enabled": false,
+  "buildDirectory": "build",
+  "sourceDirectory": "$(ProjectPath)",
+  "generator": "",
+  "buildType": "",
+  "arguments": [],
+  "parentProject": ""
+ }, {
+  "name": "Release",
+  "enabled": false,
+  "buildDirectory": "build",
+  "sourceDirectory": "$(ProjectPath)",
+  "generator": "",
+  "buildType": "",
+  "arguments": [],
+  "parentProject": ""
+ }, {
+  "name": "m32",
+  "enabled": false,
+  "buildDirectory": "build",
+  "sourceDirectory": "$(ProjectPath)",
+  "generator": "",
+  "buildType": "",
+  "arguments": [],
+  "parentProject": ""
+ }, {
+  "name": "m32clang",
+  "enabled": false,
+  "buildDirectory": "build",
+  "sourceDirectory": "$(ProjectPath)",
+  "generator": "",
+  "buildType": "",
+  "arguments": [],
+  "parentProject": ""
+ }, {
+  "name": "m32g++",
+  "enabled": false,
+  "buildDirectory": "build",
+  "sourceDirectory": "$(ProjectPath)",
+  "generator": "",
+  "buildType": "",
+  "arguments": [],
+  "parentProject": ""
+ }, {
+  "name": "m64",
+  "enabled": false,
+  "buildDirectory": "build",
+  "sourceDirectory": "$(ProjectPath)",
+  "generator": "",
+  "buildType": "",
+  "arguments": [],
+  "parentProject": ""
+ }, {
+  "name": "m64clang",
+  "enabled": false,
+  "buildDirectory": "build",
+  "sourceDirectory": "$(ProjectPath)",
+  "generator": "",
+  "buildType": "",
+  "arguments": [],
+  "parentProject": ""
+ }, {
+  "name": "m64g++",
+  "enabled": false,
+  "buildDirectory": "build",
+  "sourceDirectory": "$(ProjectPath)",
+  "generator": "",
+  "buildType": "",
+  "arguments": [],
+  "parentProject": ""
+ }, {
+  "name": "mx32",
+  "enabled": false,
+  "buildDirectory": "build",
+  "sourceDirectory": "$(ProjectPath)",
+  "generator": "",
+  "buildType": "",
+  "arguments": [],
+  "parentProject": ""
+ }, {
+  "name": "mx32clang",
+  "enabled": false,
+  "buildDirectory": "build",
+  "sourceDirectory": "$(ProjectPath)",
+  "generator": "",
+  "buildType": "",
+  "arguments": [],
+  "parentProject": ""
+ }, {
+  "name": "mx32g++",
+  "enabled": false,
+  "buildDirectory": "build",
+  "sourceDirectory": "$(ProjectPath)",
+  "generator": "",
+  "buildType": "",
+  "arguments": [],
+  "parentProject": ""
+ }]]]>
+    </Plugin>
+  </Plugins>
+  <Description/>
+  <Dependencies/>
+  <VirtualDirectory Name="src">
+    <File Name="main.cpp" ExcludeProjConfig=""/>
+    <File Name="obj.cpp" ExcludeProjConfig="Debug;Release;m32;m32clang;m32g++;m64;m64clang;m64g++;mx32;mx32clang;mx32g++"/>
+    <File Name="Aggregate.cpp" ExcludeProjConfig="Debug;Release;m32;m32clang;m32g++;m64;m64clang;m64g++;mx32;mx32clang;mx32g++"/>
+    <File Name="execute.cpp" ExcludeProjConfig="Debug;Release;m32;m32clang;m32g++;m64;m64clang;m64g++;mx32;mx32clang;mx32g++"/>
+    <File Name="String.cpp" ExcludeProjConfig="Debug;Release;m32;m32clang;m32g++;m64;m64clang;m64g++;mx32;mx32clang;mx32g++"/>
+    <File Name="interpreter.cpp" ExcludeProjConfig="Debug;Release;m32;m32clang;m32g++;m64;m64clang;m64g++;mx32;mx32clang;mx32g++"/>
+    <File Name="AggregateOrdered.cpp" ExcludeProjConfig="Debug;Release;m32;m32clang;m32g++;m64;m64clang;m64g++;mx32;mx32clang;mx32g++"/>
+    <File Name="obj.h" ExcludeProjConfig="Debug;Release;m32;m32clang;m32g++;m64;m64clang;m64g++;mx32;mx32clang;mx32g++"/>
+    <File Name="compactGarbageCollect.cpp" ExcludeProjConfig="Debug;Release;m32;m32clang;m32g++;m64;m64clang;m64g++;mx32;mx32clang;mx32g++"/>
+    <File Name="classInfo.h" ExcludeProjConfig="Debug;Release;m32;m32clang;m32g++;m64;m64clang;m64g++;mx32;mx32clang;mx32g++"/>
+    <File Name="Aggregate.h" ExcludeProjConfig="Debug;Release;m32;m32clang;m32g++;m64;m64clang;m64g++;mx32;mx32clang;mx32g++"/>
+    <File Name="file2String.cpp" ExcludeProjConfig="Debug;Release;m32;m32clang;m32g++;m64;m64clang;m64g++;mx32;mx32clang;mx32g++"/>
+    <File Name="naplCharTraits.cpp" ExcludeProjConfig="Debug;Release;m32;m32clang;m32g++;m64;m64clang;m64g++;mx32;mx32clang;mx32g++"/>
+    <File Name="includes.cpp" ExcludeProjConfig="Debug;Release;m32;m32clang;m32g++;m64;m64clang;m64g++;mx32;mx32clang;mx32g++"/>
+    <File Name="vect.h" ExcludeProjConfig="Debug;Release;m32;m32clang;m32g++;m64;m64clang;m64g++;mx32;mx32clang;mx32g++"/>
+    <File Name="classInfoNames" ExcludeProjConfig="Debug;Release;m32;m32clang;m32g++;m64;m64clang;m64g++;mx32;mx32clang;mx32g++"/>
+    <File Name="stringLitteral.h" ExcludeProjConfig="Debug;Release;m32;m32clang;m32g++;m64;m64clang;m64g++;mx32;mx32clang;mx32g++"/>
+    <File Name="system_includes.h" ExcludeProjConfig="Debug;Release;m32;m32clang;m32g++;m64;m64clang;m64g++;mx32;mx32clang;mx32g++"/>
+    <File Name="AggregateOrdered.h" ExcludeProjConfig="Debug;Release;m32;m32clang;m32g++;m64;m64clang;m64g++;mx32;mx32clang;mx32g++"/>
+    <File Name="microHttpd.cpp" ExcludeProjConfig="Debug;Release;m32;m32clang;m32g++;m64;m64clang;m64g++;mx32;mx32clang;mx32g++"/>
+    <File Name="locals.cpp" ExcludeProjConfig="Debug;Release;m32;m32clang;m32g++;m64;m64clang;m64g++;mx32;mx32clang;mx32g++"/>
+    <File Name="concatenateSlices.cpp" ExcludeProjConfig="Debug;Release;m32;m32clang;m32g++;m64;m64clang;m64g++;mx32;mx32clang;mx32g++"/>
+    <File Name="stacks.cpp" ExcludeProjConfig="Debug;Release;m32;m32clang;m32g++;m64;m64clang;m64g++;mx32;mx32clang;mx32g++"/>
+    <File Name="classInfo0.h" ExcludeProjConfig="Debug;Release;m32;m32clang;m32g++;m64;m64clang;m64g++;mx32;mx32clang;mx32g++"/>
+    <File Name="track.h" ExcludeProjConfig="Debug;Release;m32;m32clang;m32g++;m64;m64clang;m64g++;mx32;mx32clang;mx32g++"/>
+    <File Name="String.h" ExcludeProjConfig="Debug;Release;m32;m32clang;m32g++;m64;m64clang;m64g++;mx32;mx32clang;mx32g++"/>
+    <File Name="mix_old_code.cpp" ExcludeProjConfig="Debug;Release;m32;m32clang;m32g++;m64;m64clang;m64g++;mx32;mx32clang;mx32g++"/>
+    <File Name="methods.cpp" ExcludeProjConfig="Debug;Release;m32;m32clang;m32g++;m64;m64clang;m64g++;mx32;mx32clang;mx32g++"/>
+    <File Name="controlStructures.cpp" ExcludeProjConfig="Debug;Release;m32;m32clang;m32g++;m64;m64clang;m64g++;mx32;mx32clang;mx32g++"/>
+    <File Name="show.cpp" ExcludeProjConfig="Debug;Release;m32;m32clang;m32g++;m64;m64clang;m64g++;mx32;mx32clang;mx32g++"/>
+    <File Name="numeric_conversions.cpp" ExcludeProjConfig="Debug;Release;m32;m32clang;m32g++;m64;m64clang;m64g++;mx32;mx32clang;mx32g++"/>
+    <File Name="stacks.h" ExcludeProjConfig="Debug;m32clang;m32g++;m64clang;m64g++;mx32clang;mx32g++"/>
+    <File Name="interpreter0.cpp" ExcludeProjConfig="Debug;m32clang;m32g++;m64clang;m64g++;mx32clang;mx32g++"/>
+    <File Name="definefunc.cpp" ExcludeProjConfig="Debug;m32clang;m32g++;m64clang;m64g++;mx32clang;mx32g++"/>
+    <File Name="interpreter0.h" ExcludeProjConfig="Debug;m32clang;m32g++;m64clang;m64g++;mx32clang;mx32g++"/>
+    <File Name="executionActions.cpp" ExcludeProjConfig="Debug;m32clang;m32g++;m64clang;m64g++;mx32clang;mx32g++"/>
+    <File Name="definePrimitives.cpp" ExcludeProjConfig="Debug;m32clang;m32g++;m64clang;m64g++;mx32clang;mx32g++"/>
+    <File Name="controlStructures.h" ExcludeProjConfig="Debug;m32clang;m32g++;m64clang;m64g++;mx32clang;mx32g++"/>
+    <File Name="patternMatching.h" ExcludeProjConfig="Debug;m32clang;m32g++;m64clang;m64g++;mx32clang;mx32g++"/>
+    <File Name="track.cpp" ExcludeProjConfig="Debug;m32clang;m32g++;m64clang;m64g++;mx32clang;mx32g++"/>
+    <File Name="interpreter.h" ExcludeProjConfig="Debug;m32clang;m32g++;m64clang;m64g++;mx32clang;mx32g++"/>
+    <File Name="methods.h" ExcludeProjConfig="Debug;m32clang;m32g++;m64clang;m64g++;mx32clang;mx32g++"/>
+    <File Name="classInfo.cpp" ExcludeProjConfig="Debug;m32clang;m32g++;m64clang;m64g++;mx32clang;mx32g++"/>
+    <File Name="Allocator.cpp" ExcludeProjConfig="Debug;m32clang;m32g++;m64clang;m64g++;mx32clang;mx32g++"/>
+    <File Name="Allocator.h" ExcludeProjConfig="Debug;m32clang;m32g++;m64clang;m64g++;mx32clang;mx32g++"/>
+    <File Name="Allocator0.h" ExcludeProjConfig="Debug;m32clang;m32g++;m64clang;m64g++;mx32clang;mx32g++"/>
+    <File Name="compactGarbageCollect.h" ExcludeProjConfig="Debug;m32clang;m32g++;m64clang;m64g++;mx32clang;mx32g++"/>
+    <File Name="consoleServer.cpp" ExcludeProjConfig="Debug;m32clang;m32g++;m64clang;m64g++;mx32clang;mx32g++"/>
+    <File Name="vect.cpp" ExcludeProjConfig="Debug;m32clang;m32g++;m64clang;m64g++;mx32clang;mx32g++"/>
+    <File Name="syncronization.cpp" ExcludeProjConfig="Debug;m32clang;m32g++;m64clang;m64g++;mx32clang;mx32g++"/>
+    <File Name="syncronization.h" ExcludeProjConfig="Debug;m32clang;m32g++;m64clang;m64g++;mx32clang;mx32g++"/>
+    <File Name="print.cpp" ExcludeProjConfig="Debug;m32clang;m32g++;m64clang;m64g++;mx32clang;mx32g++"/>
+    <File Name="baseStructures.h" ExcludeProjConfig="Debug;m32clang;m32g++;m64g++;mx32clang;mx32g++"/>
+    <File Name="baseDefines.h" ExcludeProjConfig="Debug;m32clang;m32g++;m64g++;mx32clang;mx32g++"/>
+    <File Name="prototype.cpp" ExcludeProjConfig="Debug;m32clang;m32g++;m64clang;m64g++;mx32clang;mx32g++"/>
+    <File Name="class_hierarchy.txt" ExcludeProjConfig="Debug;m32clang;m32g++;m64g++;mx32clang;mx32g++"/>
+    <File Name="naplMethods.napl" ExcludeProjConfig="Debug;m32clang;m64g++;mx32clang;mx32g++"/>
+    <File Name="naplStart0.napl" ExcludeProjConfig="Debug;m32clang;m64g++;mx32clang;mx32g++"/>
+    <File Name="naplClassClassInfo.napl" ExcludeProjConfig="Debug;m32clang;mx32g++"/>
+    <File Name="napl_test2.napl" ExcludeProjConfig="Debug;m32clang;mx32g++"/>
+    <File Name="napl_patterns.napl" ExcludeProjConfig="Debug;m32clang;mx32g++"/>
+    <File Name="napl_patterns_test.napl" ExcludeProjConfig="Debug;m32clang;mx32g++"/>
+    <File Name="Char.cpp" ExcludeProjConfig="Debug;m32clang;m32g++;m64g++;mx32clang;mx32g++"/>
+    <File Name="executionActions.h" ExcludeProjConfig="Debug;m32clang;mx32g++"/>
+    <File Name="napl_html_patterns.napl" ExcludeProjConfig="Debug;m32clang;mx32g++"/>
+    <File Name="napl_html_patterns1.napl" ExcludeProjConfig="Debug;m32clang;m64g++;mx32g++"/>
+    <File Name="patternMatchingSinglePos.cpp" ExcludeProjConfig="Debug;m32clang;m32g++;m64g++;mx32g++"/>
+    <File Name="patternMatchingMultiPos.cpp" ExcludeProjConfig="Debug;m32clang;m32g++;m64g++;mx32g++"/>
+    <File Name="patternMatchingGeneric.cpp" ExcludeProjConfig="Debug;m32clang;m32g++;m64g++;mx32g++"/>
+    <File Name="url2String.cpp" ExcludeProjConfig="m32clang;m32g++;m64g++;mx32g++"/>
+    <File Name="patternMatching_ext.h" ExcludeProjConfig="m32clang;mx32g++"/>
+    <File Name="execute_new.cpp" ExcludeProjConfig="m32g++;m64g++;mx32g++"/>
+    <File Name="compiler.h" ExcludeProjConfig="mx32g++"/>
+    <File Name="level.h"/>
+    <File Name="execute.h"/>
+    <File Name="thread_variables_access.h"/>
+    <File Name="thread_stack.cpp" ExcludeProjConfig="mx32g++"/>
+    <File Name="napl_definers.napl"/>
+  </VirtualDirectory>
+  <Dependencies Name="Debug"/>
+  <Dependencies Name="Release"/>
+  <Dependencies Name="m32clang"/>
+  <Dependencies Name="m32g++"/>
+  <Dependencies Name="m64clang"/>
+  <Dependencies Name="m64g++"/>
+  <Dependencies Name="mx32clang"/>
+  <Dependencies Name="mx32g++"/>
+  <Settings Type="Executable">
+    <GlobalSettings>
+      <Compiler Options="" C_Options="" Assembler="">
+        <IncludePath Value="."/>
+      </Compiler>
+      <Linker Options="">
+        <LibraryPath Value="."/>
+      </Linker>
+      <ResourceCompiler Options=""/>
+    </GlobalSettings>
+    <Configuration Name="Debug" CompilerType="gnu g++" DebuggerType="GNU gdb debugger" Type="Executable" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
+      <Compiler Options="-mx32;-std=c++14;-O0;-g;-funsigned-char;-fpermissive;-Wno-logical-op-parentheses;-pthread;" C_Options="-g;-O0;-Wall" Assembler="" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" PCHFlags="" PCHFlagsPolicy="0">
+        <IncludePath Value="/usr/include/x86_64-linux-gnu/c++/5/x32/"/>
+      </Compiler>
+      <Linker Options="-mx32;-pthread;" Required="yes">
+        <Library Value="readline"/>
+        <Library Value="ncurses"/>
+      </Linker>
+      <ResourceCompiler Options="" Required="no"/>
+      <General OutputFile="$(IntermediateDirectory)/$(ProjectName)" IntermediateDirectory="./mx32" Command="./$(ProjectName)" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="set output-radix 16" WorkingDirectory="$(IntermediateDirectory)" PauseExecWhenProcTerminates="yes" IsGUIProgram="no" IsEnabled="yes"/>
+      <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;">
+        <![CDATA[]]>
+      </Environment>
+      <Debugger IsRemote="no" RemoteHostName="" RemoteHostPort="" DebuggerPath="" IsExtended="no">
+        <DebuggerSearchPaths/>
+        <PostConnectCommands/>
+        <StartupCommands>set output-radix 16</StartupCommands>
+      </Debugger>
+      <PreBuild/>
+      <PostBuild/>
+      <CustomBuild Enabled="no">
+        <RebuildCommand/>
+        <CleanCommand/>
+        <BuildCommand/>
+        <PreprocessFileCommand/>
+        <SingleFileCommand/>
+        <MakefileGenerationCommand/>
+        <ThirdPartyToolName>None</ThirdPartyToolName>
+        <WorkingDirectory/>
+      </CustomBuild>
+      <AdditionalRules>
+        <CustomPostBuild/>
+        <CustomPreBuild/>
+      </AdditionalRules>
+      <Completion EnableCpp11="no" EnableCpp14="no">
+        <ClangCmpFlagsC/>
+        <ClangCmpFlags/>
+        <ClangPP/>
+        <SearchPaths/>
+      </Completion>
+    </Configuration>
+    <Configuration Name="Release" CompilerType="gnu g++" DebuggerType="GNU gdb debugger" Type="Executable" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
+      <Compiler Options="-m32;-std=c++14;-O0;-g;-funsigned-char;-fpermissive;-Wno-logical-op-parentheses;" C_Options="-freg-struct-return;" Assembler="" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" PCHFlags="" PCHFlagsPolicy="0"/>
+      <Linker Options="-m32" Required="yes">
+        <Library Value="readline"/>
+        <Library Value="ncurses"/>
+      </Linker>
+      <ResourceCompiler Options="" Required="no"/>
+      <General OutputFile="$(IntermediateDirectory)/$(ProjectName)" IntermediateDirectory="" Command="./$(ProjectName)" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="$(IntermediateDirectory)" PauseExecWhenProcTerminates="yes" IsGUIProgram="no" IsEnabled="no"/>
+      <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;">
+        <![CDATA[]]>
+      </Environment>
+      <Debugger IsRemote="no" RemoteHostName="" RemoteHostPort="" DebuggerPath="" IsExtended="yes">
+        <DebuggerSearchPaths/>
+        <PostConnectCommands/>
+        <StartupCommands/>
+      </Debugger>
+      <PreBuild/>
+      <PostBuild/>
+      <CustomBuild Enabled="no">
+        <RebuildCommand/>
+        <CleanCommand/>
+        <BuildCommand/>
+        <PreprocessFileCommand/>
+        <SingleFileCommand/>
+        <MakefileGenerationCommand/>
+        <ThirdPartyToolName>None</ThirdPartyToolName>
+        <WorkingDirectory/>
+      </CustomBuild>
+      <AdditionalRules>
+        <CustomPostBuild/>
+        <CustomPreBuild/>
+      </AdditionalRules>
+      <Completion EnableCpp11="no" EnableCpp14="no">
+        <ClangCmpFlagsC/>
+        <ClangCmpFlags/>
+        <ClangPP/>
+        <SearchPaths/>
+      </Completion>
+    </Configuration>
+    <Configuration Name="m32clang" CompilerType="clang++" DebuggerType="GNU gdb debugger" Type="Executable" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
+      <Compiler Options="-O0;-pthread;-m32;-std=c++14;-g;-funsigned-char;-fpermissive;-Wno-logical-op-parentheses;-pthread;" C_Options="-g;-O0;-Wall" Assembler="" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" PCHFlags="" PCHFlagsPolicy="0">
+        <IncludePath Value="/usr/include/x86_64-linux-gnu/c++/5/32"/>
+      </Compiler>
+      <Linker Options="-m32;-pthread;" Required="yes">
+        <LibraryPath Value="/usr/lib/gcc/x86_64-linux-gnu/5/32"/>
+        <Library Value="readline"/>
+        <Library Value="ncurses"/>
+      </Linker>
+      <ResourceCompiler Options="" Required="no"/>
+      <General OutputFile="$(IntermediateDirectory)/$(ProjectName)$(ConfigurationName)" IntermediateDirectory="./m32clang" Command="$(ProjectName)$(ConfigurationName)" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="$(IntermediateDirectory)" PauseExecWhenProcTerminates="yes" IsGUIProgram="no" IsEnabled="yes"/>
+      <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;">
+        <![CDATA[]]>
+      </Environment>
+      <Debugger IsRemote="no" RemoteHostName="" RemoteHostPort="" DebuggerPath="" IsExtended="no">
+        <DebuggerSearchPaths/>
+        <PostConnectCommands/>
+        <StartupCommands/>
+      </Debugger>
+      <PreBuild/>
+      <PostBuild/>
+      <CustomBuild Enabled="no">
+        <RebuildCommand/>
+        <CleanCommand/>
+        <BuildCommand/>
+        <PreprocessFileCommand/>
+        <SingleFileCommand/>
+        <MakefileGenerationCommand/>
+        <ThirdPartyToolName>None</ThirdPartyToolName>
+        <WorkingDirectory/>
+      </CustomBuild>
+      <AdditionalRules>
+        <CustomPostBuild/>
+        <CustomPreBuild/>
+      </AdditionalRules>
+      <Completion EnableCpp11="no" EnableCpp14="no">
+        <ClangCmpFlagsC/>
+        <ClangCmpFlags/>
+        <ClangPP/>
+        <SearchPaths/>
+      </Completion>
+    </Configuration>
+    <Configuration Name="m32g++" CompilerType="gnu g++" DebuggerType="GNU gdb debugger" Type="Executable" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
+      <Compiler Options="-m32;-std=c++14;-O0;-g;-funsigned-char;-fpermissive;-Wno-logical-op-parentheses;-pthread;" C_Options="-g;-O0;-Wall" Assembler="" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" PCHFlags="" PCHFlagsPolicy="0">
+        <IncludePath Value="/usr/include/x86_64-linux-gnu/c++/5/32"/>
+      </Compiler>
+      <Linker Options="-m32 -pthread -std=c++14 -fopenmp" Required="yes">
+        <LibraryPath Value="/usr/lib/gcc/x86_64-linux-gnu/5/32"/>
+        <Library Value="readline"/>
+        <Library Value="ncurses"/>
+      </Linker>
+      <ResourceCompiler Options="" Required="no"/>
+      <General OutputFile="$(IntermediateDirectory)/$(ProjectName)$(ConfigurationName)" IntermediateDirectory="./m32g++" Command="$(ProjectName)$(ConfigurationName)" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="$(IntermediateDirectory)" PauseExecWhenProcTerminates="yes" IsGUIProgram="no" IsEnabled="yes"/>
+      <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;">
+        <![CDATA[]]>
+      </Environment>
+      <Debugger IsRemote="no" RemoteHostName="" RemoteHostPort="" DebuggerPath="" IsExtended="no">
+        <DebuggerSearchPaths/>
+        <PostConnectCommands/>
+        <StartupCommands>set output-radix 16</StartupCommands>
+      </Debugger>
+      <PreBuild/>
+      <PostBuild/>
+      <CustomBuild Enabled="no">
+        <RebuildCommand/>
+        <CleanCommand/>
+        <BuildCommand/>
+        <PreprocessFileCommand/>
+        <SingleFileCommand/>
+        <MakefileGenerationCommand/>
+        <ThirdPartyToolName>None</ThirdPartyToolName>
+        <WorkingDirectory/>
+      </CustomBuild>
+      <AdditionalRules>
+        <CustomPostBuild/>
+        <CustomPreBuild/>
+      </AdditionalRules>
+      <Completion EnableCpp11="no" EnableCpp14="no">
+        <ClangCmpFlagsC/>
+        <ClangCmpFlags/>
+        <ClangPP/>
+        <SearchPaths/>
+      </Completion>
+    </Configuration>
+    <Configuration Name="m64clang" CompilerType="gnu g++" DebuggerType="GNU gdb debugger" Type="Executable" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
+      <Compiler Options="-O3;-pthread;-m64;-std=c++14;-g;-funsigned-char;-fpermissive;-Wno-logical-op-parentheses;" C_Options="-g;-O0;-Wall" Assembler="" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" PCHFlags="" PCHFlagsPolicy="0"/>
+      <Linker Options="-m64;-pthread;" Required="yes">
+        <Library Value="readline"/>
+        <Library Value="ncurses"/>
+      </Linker>
+      <ResourceCompiler Options="" Required="no"/>
+      <General OutputFile="$(IntermediateDirectory)/$(ProjectName)$(ConfigurationName)" IntermediateDirectory="./m64clang" Command="./$(ProjectName)$(ConfigurationName)" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="$(IntermediateDirectory)" PauseExecWhenProcTerminates="yes" IsGUIProgram="no" IsEnabled="yes"/>
+      <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;">
+        <![CDATA[]]>
+      </Environment>
+      <Debugger IsRemote="no" RemoteHostName="" RemoteHostPort="" DebuggerPath="" IsExtended="no">
+        <DebuggerSearchPaths/>
+        <PostConnectCommands/>
+        <StartupCommands>set output-radix 16</StartupCommands>
+      </Debugger>
+      <PreBuild/>
+      <PostBuild/>
+      <CustomBuild Enabled="no">
+        <RebuildCommand/>
+        <CleanCommand/>
+        <BuildCommand/>
+        <PreprocessFileCommand/>
+        <SingleFileCommand/>
+        <MakefileGenerationCommand/>
+        <ThirdPartyToolName>None</ThirdPartyToolName>
+        <WorkingDirectory/>
+      </CustomBuild>
+      <AdditionalRules>
+        <CustomPostBuild/>
+        <CustomPreBuild/>
+      </AdditionalRules>
+      <Completion EnableCpp11="no" EnableCpp14="no">
+        <ClangCmpFlagsC/>
+        <ClangCmpFlags/>
+        <ClangPP/>
+        <SearchPaths/>
+      </Completion>
+    </Configuration>
+    <Configuration Name="m64g++" CompilerType="gnu g++" DebuggerType="GNU gdb debugger" Type="Executable" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
+      <Compiler Options="-m64;-std=c++14;-O0;-g;-funsigned-char;-fpermissive;-Wno-logical-op-parentheses;-fopenmp" C_Options="-g;-O0;-Wall" Assembler="" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" PCHFlags="" PCHFlagsPolicy="0"/>
+      <Linker Options="-m64;-fopenmp" Required="yes">
+        <LibraryPath Value="/usr/lib/x86_64-linux-gnu/"/>
+        <Library Value="readline"/>
+        <Library Value="ncurses"/>
+      </Linker>
+      <ResourceCompiler Options="" Required="no"/>
+      <General OutputFile="$(IntermediateDirectory)/$(ProjectName)$(ConfigurationName)" IntermediateDirectory="./m64g++" Command="$(ProjectName)$(ConfigurationName)" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="$(IntermediateDirectory)" PauseExecWhenProcTerminates="yes" IsGUIProgram="no" IsEnabled="yes"/>
+      <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;">
+        <![CDATA[]]>
+      </Environment>
+      <Debugger IsRemote="no" RemoteHostName="" RemoteHostPort="" DebuggerPath="" IsExtended="no">
+        <DebuggerSearchPaths/>
+        <PostConnectCommands/>
+        <StartupCommands>set output-radix 16</StartupCommands>
+      </Debugger>
+      <PreBuild/>
+      <PostBuild/>
+      <CustomBuild Enabled="no">
+        <RebuildCommand/>
+        <CleanCommand/>
+        <BuildCommand/>
+        <PreprocessFileCommand/>
+        <SingleFileCommand/>
+        <MakefileGenerationCommand/>
+        <ThirdPartyToolName>None</ThirdPartyToolName>
+        <WorkingDirectory/>
+      </CustomBuild>
+      <AdditionalRules>
+        <CustomPostBuild/>
+        <CustomPreBuild/>
+      </AdditionalRules>
+      <Completion EnableCpp11="no" EnableCpp14="no">
+        <ClangCmpFlagsC/>
+        <ClangCmpFlags/>
+        <ClangPP/>
+        <SearchPaths/>
+      </Completion>
+    </Configuration>
+    <Configuration Name="mx32clang" CompilerType="clang++" DebuggerType="GNU gdb debugger" Type="Executable" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
+      <Compiler Options="-O0;-mx32;-std=c++14;-g;-funsigned-char;-fpermissive;-Wno-logical-op-parentheses;-pthread;" C_Options="-g;-O0;-Wall" Assembler="" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" PCHFlags="" PCHFlagsPolicy="0">
+        <IncludePath Value="/usr/include/x86_64-linux-gnu/c++/5/x32"/>
+      </Compiler>
+      <Linker Options="-mx32;-pthread;" Required="yes">
+        <LibraryPath Value="/usr/lib/gcc/x86_64-linux-gnu/5/x32"/>
+        <Library Value="readline"/>
+        <Library Value="ncurses"/>
+      </Linker>
+      <ResourceCompiler Options="" Required="no"/>
+      <General OutputFile="$(IntermediateDirectory)/$(ProjectName)$(ConfigurationName)" IntermediateDirectory="./mx32clang" Command="$(ProjectName)$(ConfigurationName)" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="$(IntermediateDirectory)" PauseExecWhenProcTerminates="yes" IsGUIProgram="no" IsEnabled="yes"/>
+      <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;">
+        <![CDATA[]]>
+      </Environment>
+      <Debugger IsRemote="no" RemoteHostName="" RemoteHostPort="" DebuggerPath="" IsExtended="no">
+        <DebuggerSearchPaths/>
+        <PostConnectCommands/>
+        <StartupCommands>set output-radix 16</StartupCommands>
+      </Debugger>
+      <PreBuild/>
+      <PostBuild/>
+      <CustomBuild Enabled="no">
+        <RebuildCommand/>
+        <CleanCommand/>
+        <BuildCommand/>
+        <PreprocessFileCommand/>
+        <SingleFileCommand/>
+        <MakefileGenerationCommand/>
+        <ThirdPartyToolName>None</ThirdPartyToolName>
+        <WorkingDirectory/>
+      </CustomBuild>
+      <AdditionalRules>
+        <CustomPostBuild/>
+        <CustomPreBuild/>
+      </AdditionalRules>
+      <Completion EnableCpp11="no" EnableCpp14="no">
+        <ClangCmpFlagsC/>
+        <ClangCmpFlags/>
+        <ClangPP/>
+        <SearchPaths/>
+      </Completion>
+    </Configuration>
+    <Configuration Name="mx32g++" CompilerType="gnu g++" DebuggerType="GNU gdb debugger" Type="Executable" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
+      <Compiler Options="-g;-O0;-mx32;-std=c++1z;-g;-funsigned-char;-fpermissive;-Wno-logical-op-parentheses;" C_Options="-g;-O0;-Wall" Assembler="" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" PCHFlags="" PCHFlagsPolicy="0"/>
+      <Linker Options="-mx32;-pthread;-g;" Required="yes">
+        <LibraryPath Value="/usr/libx32"/>
+        <Library Value="readline"/>
+        <Library Value="ncurses"/>
+      </Linker>
+      <ResourceCompiler Options="" Required="no"/>
+      <General OutputFile="$(IntermediateDirectory)/$(ProjectName)$(ConfigurationName)" IntermediateDirectory="./mx32g++" Command="$(ProjectName)$(ConfigurationName)" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="$(IntermediateDirectory)" PauseExecWhenProcTerminates="yes" IsGUIProgram="no" IsEnabled="yes"/>
+      <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;">
+        <![CDATA[]]>
+      </Environment>
+      <Debugger IsRemote="no" RemoteHostName="" RemoteHostPort="" DebuggerPath="" IsExtended="no">
+        <DebuggerSearchPaths/>
+        <PostConnectCommands/>
+        <StartupCommands>set output-radix 16</StartupCommands>
+      </Debugger>
+      <PreBuild/>
+      <PostBuild/>
+      <CustomBuild Enabled="no">
+        <RebuildCommand/>
+        <CleanCommand/>
+        <BuildCommand/>
+        <PreprocessFileCommand/>
+        <SingleFileCommand/>
+        <MakefileGenerationCommand/>
+        <ThirdPartyToolName>None</ThirdPartyToolName>
+        <WorkingDirectory/>
+      </CustomBuild>
+      <AdditionalRules>
+        <CustomPostBuild/>
+        <CustomPreBuild/>
+      </AdditionalRules>
+      <Completion EnableCpp11="no" EnableCpp14="no">
+        <ClangCmpFlagsC/>
+        <ClangCmpFlags/>
+        <ClangPP/>
+        <SearchPaths/>
+      </Completion>
+    </Configuration>
+  </Settings>
+</CodeLite_Project>

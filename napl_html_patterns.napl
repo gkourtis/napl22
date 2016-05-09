@@ -1,0 +1,79 @@
+{crlf} { 13 10 } seq is
+
+{HTTPREQUEST} { 
+	mark Method mark “ ” mark 32 noMatch advance 32 noMatch0++ mark “ HTTP/1.1” crlf 
+	mark anything mark crlf crlf 
+} is
+
+{testhr} { `GET /home/gk HTTP/1.1' crlf matchStart ~ HTTPREQUEST debug } is
+
+
+{Method} { “OPTIONS” “GET” “HEAD” “POST” “PUT” “DELETE” “TRACE” “CONNECT” } any is
+
+
+{testany} { `GET' Method debug } is
+
+
+{SP} \  is 
+
+{HTTP-Version} {HTTP/1.1} seq is
+
+{Request-URI} { \* absoluteURI abs_path authority } any is
+
+{alphaChar} {ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz} any is
+
+{uriChar} 2~ alphaChar digit {-._/~} @+ @+ any is
+
+{uriGen} {:/?#[]@} any is 
+
+{uriSub} {!$&'()*+,;=} any is 
+
+{uriRes} 2~ uriGen uriSub @+ any is
+
+{uriScheme} { {http} {ftp} } any is 
+
+{schemeChar} 2~ alphaChar digit {+.-} @+ @+ any is
+
+{scheme} { alphaChar ~ schemeChar match0++ } is
+
+{absoluteUri} { scheme “:” hier-part { “?” query } match01 { “#” fragment } match01 } is
+
+
+
+{HTTPREQUEST} { Method “ ” Request-URI “ ” HTTP-Version CRLF } seq is 
+
+«
+  bellow are definitions done using 
+	https://www.w3.org/TR/html-markup/syntax.html#legacy-tool-compatible-doctype
+»
+
+`space' :any{ 9 10 11 12 13 32 133 }
+
+`space0+' :{ ~ space match0+ }
+`space1+' :{ ~ space match1+ }
+
+
+`nameChar' ~ ¦0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz| is 
+`name' :{ ~ nameChar match1++ }
+
+`controlChar' :any{
+	0   1  2  3  4  5  6  7  8  9 10 11 12 13 14 15
+	16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31
+	127 128 
+}	
+
+`controlNonSpaceChar'			~ controlChar	~	space @- any is
+
+`nonAttributeChar'				classString setClass
+{ \" \' \> \< \/ \= } ~ space @+ ~ controlChar @+ any 
+is
+
+`attributeChar' ~ nonAttributeChar clone none is  
+
+« Text 
+must not contain U+0000 characters
+must not contain permanently undefined Unicode characters
+must not contain control characters other than space characters
+»
+
+`text' ~ controlNonSpaceChar clone none is 

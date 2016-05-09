@@ -1,0 +1,26 @@
+2
+	`{' over [ [ 0 ~ setLevel ] dup>|> ~ .{ ] swap setLevel is
+	`}' [ dup>|> ~ .} ] 2 setLevel is  
+drop
+3
+	`{{' over [ [ 0 ~ setLevel ] dup>|> ~ .{ ] swap setLevel is
+	`}}' over [ dup>|> ~ .} ] swap setLevel is  
+drop
+4
+	`{{{' over [ [ 0 ~ setLevel ] dup>|> ~ .{ ] swap setLevel is
+	`}}}' over [ dup>|> ~ .} ] swap setLevel is  
+drop
+
+`:{' 2 [ [ 1 ~ setLevel ~ is ] dup>|> ~ .{ ] swap setLevel is
+
+
+`for'    :{ for? drop }
+`times'  :{ times? drop }
+
+« `|' {{ } { }} 2 setLevel is 
+
+`if{' {{ ~ if 2 .{ }} 2 setLevel is
+
+»
+
+                   

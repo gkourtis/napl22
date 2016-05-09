@@ -1,0 +1,33 @@
+any
+	object	
+	class
+		gClass 														// generic Class		
+		sClass 														// struct Class
+			fix															// fix size
+				undefined
+				extStruct
+				defered
+				primitive // fix size or may be also var size if saved in the body
+				Int
+				Float
+				Double
+				Int64
+				sbitString // sbitString may hold up to the wordBits-ln(wordBits) bits
+				field
+				method
+		
+			var																// variable size
+
+			Aggregate													// variable expandable size
+				AggregateM											
+				AggregateL
+			String
+				Comment
+			patternAny
+			patternAll
+			bitAggregate
+
+	
+
+
+	

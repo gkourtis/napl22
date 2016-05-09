@@ -1,0 +1,13 @@
+{naplClassClassInfo.napl} 	include
+
+{napl_definers.napl} 				include
+
+{napl_patterns.napl} 				include 
+
+
+{napl_patterns_test.napl} 	include
+
+{napl_html_patterns.napl} 	include
+
+{napl_html_patterns1.napl} 	include
+

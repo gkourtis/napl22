@@ -1,0 +1,32 @@
+`method{' { { classMethod setClass 1 setLevel is } 2 ~~ .{ } 2 setLevel is
+
+`+' method{
+	{ classInt   	classInt			}	int+
+	{ classDouble	classDouble	}	double+
+	{ classInt			classDouble	}	{	swap int2double swap double+ }
+	{ classDouble	classInt			}	{	int2double double+ }
+}
+
+`-' method{
+	{ classInt			classInt			}	int-
+	{ classDouble	classDouble	}	double-
+	{ classInt			classDouble	}	{ swap int2double swap double- }
+	{ classDouble	classInt			}	{ int2double double- }
+}
+
+`*' method{
+	{ classInt			classInt			} int*
+	{ classDouble	classDouble	} double*
+	{ classInt			classDouble	} { swap int2double swap double* }
+	{ classDouble	classInt			} {	int2double double* }
+}
+
+`/' method{
+	{ classInt	   classInt		} int/
+	{ classDouble classDouble	} double/
+	{ classInt	   classDouble	} { swap int2double swap double/ }
+	{ classDouble classInt		} { int2double double/ }
+}
+
+dropall
+

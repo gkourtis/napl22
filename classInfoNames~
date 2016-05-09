@@ -1,0 +1,33 @@
+/*
+The Cl macro has 3 forms:
+0: doesn't create a classInfo, just reserves a class.
+A: creates a classInfoclassInfoElements<dT>)
+B: ???
+F: creates a classInfo with fixed size the data furnished
+
+the first parameter is 0|A|B|F
+the second parameter is the name of the classInfo that we are defining
+the third parameter is the anchestor Class
+the fourth parameter is type of data object that is held inside the class
+
+*/
+
+
+#define classInfoNames \
+/*0*/		Cl(0,classNotFound,(Obj)freeClass,Word) \
+/*1*/		Cl(A,classClass,(Obj)freeClass,Word) \
+/*2*/		Cl(B,classClassInfo,classClass,Word)\
+/*3*/		Cl(A,classAggregate,classClassInfo,Word)\
+/*4*/		Cl(0,classUndefined,classClass,Word)\
+/*5*/		Cl(0,classPrimitive,classClass,Word)\
+/*6*/		Cl(A,classDeferred,classClassInfo,Word)\
+/*7*/		Cl(F,classInt,classClassInfo,Int)\
+/*8*/		Cl(F,classFloat,classClassInfo,float)\
+/*9*/		Cl(F,classDouble,classClassInfo,double)\
+/*A*/		Cl(F,classInt64,classClassInfo,int64_t)\
+/*B*/		Cl(F,classBitString,classClassInfo,bitString)\
+/*C*/		Cl(A,classString,classAggregate,Word)\
+/*D*/		Cl(A,classComment,classString,Word)\
+/*E*/		Cl(A,classPatternAny,classAggregate,Word)\
+/*F*/		Cl(A,classPatternAll,classAggregate,Word)\
+

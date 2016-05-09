@@ -1,0 +1,40 @@
+numOfTimes1 1000 <-
+numOfTimes2 1000 <-
+
+instructionsPerCycle 10 <-
+processorSpeed 2,2e9 <-
+
+
+`bench' :{ 
+	msecs 
+		numOfTimes1 { 94576389 numOfTimes2 4 pick times drop } times 
+	msecs swap int- swap drop int2double
+	1000,  double/ processorSpeed double* 
+	instructionsPerCycle numOfTimes1 int* numOfTimes2 int* int2double double/
+} 
+
+`bb' :{
+	23434 4959405
+	`bb started' print newline
+	{ dup int+ dup int+ dup int+ dup int+ dup int+ } bench print newline
+	{ dup int* dup int* dup int* dup int* dup int* } bench print newline
+	{ dup int/ dup int/ dup int/ dup int/ dup int/ } bench print newline
+
+	{ dup int+ dup int+ dup int+ dup int+ dup int+ } bench print newline
+	{ dup int* dup int* dup int* dup int* dup int* } bench print newline
+	{ dup int/ dup int/ dup int/ dup int/ dup int/ } bench print newline
+	`bb ended' print newline
+	drop drop
+}
+
+dropall
+
+`over2'		:{ over over }
+`rot'			:{ 3 roll> }
+
+`test1'		:{ 14 15 over2 int+ 3 rot int+ int- }
+
+
+
+ 
+

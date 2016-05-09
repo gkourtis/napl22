@@ -1,0 +1,32 @@
+/*
+The Cl macro has 3 forms:
+0: doesn't create a classInfo, just reserves a class.
+A: creates a classInfo with the prefixed data necessary for classInfo and filled accordingly
+B: creates a classInfo with fields and some available space for expansion
+F: creates a classInfo with fixed size the data furnished
+
+the first parameter is 0|A|B|F
+the second parameter is the name of the classInfo that we are defining
+the third parameter is the anchestor Class
+the fourth parameter is type of data object that is held inside the class
+*/
+
+#define classInfoNames \
+/* 0*/		Cl(0,classClass,			(Obj)freeClass,		void,							NULL)		/* All objects should inherit from there */\
+/* 1*/		Cl(B,classClassInfo,	classClass,				hAggregate,				pushObjAction)		/* meant to hold fieldNames of classInfo no data */\
+/* 2*/		Cl(A,classAggregate,	classClassInfo,		hAggregate,				pushObjAction)\
+/* 3*/		Cl(0,classUndefined,	classClass,				void,							NULL)\
+/* 4*/		Cl(0,classPrimitive,	classClass,				void,							NULL)\
+/* 5*/		Cl(F,classDeferred,		classClassInfo,		hFix_<obj>,				classDeferredAction)\
+/* 6*/		Cl(F,classInt,				classClassInfo,		hFix_<Int>,				pushObjAction)\
+/* 7*/		Cl(F,classFloat,			classClassInfo,		hFix_<float>,			pushObjAction)\
+/* 8*/		Cl(F,classDouble,			classClassInfo,		hFix_<double>,		pushObjAction)\
+/* 9*/		Cl(F,classInt64,			classClassInfo,		hFix_<int64_t>,		pushObjAction)\
+/* A*/		Cl(F,classBitString,	classClassInfo,		hFix_<bitString>,	pushObjAction)\
+/* B*/		Cl(0,classString,			classAggregate,		void,							NULL)\
+/* C*/		Cl(A,classComment,		classString,			hAggregate,				nopAction)\
+/* D*/		Cl(A,classPattern,		classClassInfo,		hAggregate,				matchAction)\
+/* E*/		Cl(0,classPatternAny,	classPattern,			void,							NULL)\
+/* F*/		Cl(0,classPatternSeq,	classPattern,			void,							NULL)\
+/*10*/		Cl(0,classPatternNone,classPattern,			void,							NULL)\
+

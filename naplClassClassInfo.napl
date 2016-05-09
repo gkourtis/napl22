@@ -1,0 +1,8 @@
+classClassInfo _[ 
+	executeFunction
+	sizeofHeader
+	sizeofElement
+	sizeofTail
+	sizeofDataP
+	offset0
+] asFields hideFields drop
