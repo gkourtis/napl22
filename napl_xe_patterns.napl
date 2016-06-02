@@ -1,0 +1,31 @@
+«
+<div class="r_desc">
+			<h2>
+				<a href="/property/poliseis|gis|panorama-voula|106289483.html">Οικόπεδο 350 τ.μ.</a>			</h2>
+			<p>
+				<a href="search?System.item_type=re_land&amp;Transaction.type_channel=117518&Geo.area_id_new__hierarchy=82977" rel="nofollow" class="r_loc" title="Προβολή όλων των αγγελιών με τα επιλεγμένα κριτήρια στην περιοχή Πανόραμα">
+				
+				Πανόραμα				</a>
+				
+				<br />
+				ΒΟΥΛΑ Πανόραμα, οικόπεδο 350 τ.μ., εντός σχεδίου, αμφιθεατρικό, σ.δ. 0,6, πρόσοψη 12 μ., θέα θάλασσα, Αμιγής Κατοικία,, τιμή 320.000€ (e-...			
+				</p>
+		
+	</div>
+»		
+		
+`ttt' :{		
+		`http://www.xe.gr/property/search?System.item_type=re_land&Transaction.type_channel=117518&page=14'
+		urlToString
+		matchStart anything
+		“<div class="r_desc">”
+		spaces
+		“<h2>”
+		spaces
+}
+
+«
+startEndTag
+		“<p>”
+		startEndTag
+»		
